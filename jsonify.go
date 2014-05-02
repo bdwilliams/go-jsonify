@@ -1,6 +1,11 @@
 package jsonify
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"strconv"
+	"database/sql"
+	_ "github.com/go-sql-driver/mysql"
+)
 
 func jsonify(rows *sql.Rows) ([]string) {
 	columns, err := rows.Columns()
