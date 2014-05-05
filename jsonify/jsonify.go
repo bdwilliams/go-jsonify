@@ -7,7 +7,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-func jsonify(rows *sql.Rows) ([]string) {
+func Jsonify(rows *sql.Rows) ([]string) {
 	columns, err := rows.Columns()
 	if err != nil {
 		panic(err.Error())
