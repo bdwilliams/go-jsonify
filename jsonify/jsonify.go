@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"strconv"
 	"database/sql"
-	_ "github.com/go-sql-driver/mysql"
 )
 
 func Jsonify(rows *sql.Rows) ([]string) {
