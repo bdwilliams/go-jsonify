@@ -3,6 +3,7 @@ package jsonify
 import (
 	"encoding/json"
 	"strconv"
+	"strings"
 	"database/sql"
 )
 
@@ -55,7 +56,7 @@ func Jsonify(rows *sql.Rows) ([]string) {
 		}
 
 		b, _ := json.Marshal(results)
-		data = append(data, string(b))
+		data = append(data, strings.TrimSpace(string(b)))
 		c++
 	}
 
